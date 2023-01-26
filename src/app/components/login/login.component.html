@@ -1,0 +1,44 @@
+<div class="container   min-vh-100 ">
+  <div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class='col-md-9 card mx-auto d-flex flex-row px-0'>
+      <div class="row">
+        <div class="col-7 d-md-flex d-none p-0 m-0" >
+          <img class="w-100" src="assets/elabd.jpg">
+        </div>
+        <div class="card-body col-5 d-flex flex-column justify-content-center p-0 m-0" style=" background-color: rgb(95, 201, 217); ">
+          <h4 class="title text-center fs-1 mt-4 pb-3"> Dashboard Login </h4>
+          <form [formGroup]="loginForm" class='col-sm-10 col-12 mx-auto '>
+            <div class='form-group '>
+              <input type="Email" class="form-control" formControlName="Email"
+              placeholder="example@gmail.com"
+              [class.is-invalid]="Email?.errors?.['required'] && !Email?.untouched"
+              [class.is-valid]="Email?.valid">
+            </div>
+            <div class='form-group py-3 '>
+              <input type="password" class="form-control" formControlName="Password"
+              placeholder="***"
+              [class.is-invalid]="Password?.errors?.['required'] && !Password?.untouched"
+              [class.is-valid]="Password?.valid">
+            </div>
+            <div class=''>
+              <input type="button" class="btn d-block w-100 " value='Login' (click)="login()"
+                [disabled]="loginForm.invalid">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="frame" *ngIf="ErrorLogin">
+  <div class="errorMsg">
+      <img src="https://100dayscss.com/codepen/alert.png" width="44" height="38" />
+          <span class="title">Oops !</span>
+          <p>There is Some InCorrect Infromation While Login So Please Try Again With Correct Email and Password</p>
+          <div class="button" (click)="ErrorLogin=false">Close</div>
+    </div>
+</div>

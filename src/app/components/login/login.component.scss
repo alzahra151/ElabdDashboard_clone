@@ -1,0 +1,154 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+
+.loginbtn {
+  background-color: black;
+}
+
+////////////////////////////////
+
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 10px;
+  min-height: 500px;
+  border: none;
+}
+
+.btn {
+  background-color: rgb(249, 187, 208);
+  border: none;
+
+  &:hover {
+    background-color: rgb(249, 187, 208);
+  }
+}
+
+input[type='email'],
+input[type='password'] {
+  border-radius: 100px;
+  border: none;
+}
+
+input[type='button'] {
+  border-radius: 100px;
+}
+
+
+
+.frame{
+  width: 100%;
+  height: 100%;
+  background:  rgba(0,0,0,.5);
+  position: absolute;
+  z-index: 100px;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.errorMsg {
+  position: absolute;
+	width: 300px;
+	height: 250px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.4);
+	text-align: center;
+	overflow: hidden;
+
+	
+	img {
+		margin-top: 24px;
+	}
+	
+	.title {
+		display: block;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 400;
+		margin: 14px 0 5px 0;
+	}
+	
+	p {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 19px;
+		margin: 0;
+		padding: 0 30px;
+	}
+	
+	.button {
+		position: absolute;
+		height: 40px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #F65656;
+		color: #fff;
+		line-height: 40px;
+		font-size: 14px;
+		font-weight: 400;
+		cursor: pointer;
+		
+		&:hover {
+			background: #EC3434;
+		}
+		
+	}
+	
+}
+
+@keyframes show-modal {
+	0% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(.95);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes hide-modal {
+	0% {
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
